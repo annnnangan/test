@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="playground.css"/> 
+    </head>
+
+    <body>
+
+        <a href="../select-games/select-games.html"><button class="back-btn">Back</button></a>
+        
+        <h1>Game of Life - Playground</h1>
+        
+        <div class="rules-btn">
+            <button id="keyboard-control-rules-btn" class="btn">Keyboard Control Rules</button>
+            <button id="mouse-control-rules-btn" class="btn">Mouse Control Rules</button>
+        </div>
+    
+
+        <div class="keyboard-control-rules">
+            <div class="rules-heading">
+                <h4>Keyboard Control</h4>
+            </div>
+
+            <div class="rules-content">
+                <div class="rule">
+                    <div class="key-layout">
+                        <div class="key">C</div>
+                    </div>
+                    <div class="description">Press C to selected place pattern</div>
+                </div>
+
+                <div class="rule">
+                    <div class="key-layout">
+                        <div class="key enter">Enter</div>
+                    </div>
+                    <div class="description">Press Enter to start generating pattern</div>
+                </div>
+
+                <div class="rule">
+                    <div class="key-layout">
+                        <div class="key">P</div>
+                    </div>
+                    <div class="description">Press P to pause pattern generating</div>
+                </div>
+
+                <div class="rule">
+                    <div class="key-layout">
+                        <div class="key">X</div>
+                    </div>
+                    <div class="description">Press X to select the starting point to place life cell</div>
+                </div>
+
+                <div class="rule">
+                    <div class="key-layout">
+                        <div class="arrow">
+                            <div class="arrow-top">
+                                <div class="key"><i class="fa-solid fa-arrow-up"></i></div>
+                            </div>
+
+                            <div class="arrow-bottom">
+                                <div class="key"><i class="fa-solid fa-arrow-left"></i></div> 
+                                <div class="key"><i class="fa-solid fa-arrow-down"></i></div>
+                                <div class="key"><i class="fa-solid fa-arrow-right"></i></div> 
+                            </div>
+                        </div>   
+                    </div>
+                    
+                    <div class="description">Press arrow button to control direction and place the life cell </div>
+                </div>
+
+            </div>
+
+            <div class="close">
+                <button class="close-btn btn close-keyboard-control-rules">Okay</button>
+            </div>
+
+        </div>
+
+        <div class="mouse-control-rules">
+            <div class="rules-heading">
+                <h4>Mouse Control</h4>
+            </div>
+
+            <div class="rules-content">
+                <div class="rule">
+                    <div class="key-layout">
+                        <video class="img-fluid" autoplay loop muted src="assests/drag.mov"></video>
+                    </div>
+                    <div class="description">Mouse drag to place life cell</div>
+                </div>
+
+                <div class="rule">
+                    <div class="key-layout">
+                        <video class="img-fluid" autoplay loop muted src="assests/release.mov"></video>
+                    </div>
+                    <div class="description">Release mouse to start generating pattern</div>
+                </div>
+            </div>
+
+            <div class="close">
+                <button class="close-btn btn close-mouse-control-rules">Okay</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="games-control">
+            <div class="games-control-left">
+
+            <div class="speed">
+                <p>Control Speed:</p>
+                <input type="range" min="1" max="60" value="15" class="slider" id="speed">
+            </div>
+
+            <div class="unit-size">
+                <p>Control Unit Size:</p>
+                <input type="range" min="10" max="40" value="10" class="slider" id="unitSize">
+            </div>
+
+        </div>
+
+            
+            <div class="control-color">
+                <p>Pick A Color Theme:</p>
+                <div class="colorPicker">
+                    <div id="grey" class="color">Grey</div>
+                    <div id="pink" class="color">Pink</div>
+                    <div id="unicorn" class="color">Unicorn</div>
+                    <div id="yellow" class="color">Yellow</div>
+                    <div id="green" class="color">Green</div>
+                    <div id="blue" class="color">Blue</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="games">
+            <div id='canvas'></div>
+            <button class="reset">Reset</button>
+        </div>
+
+    
+        <p class="patterns-rule">Select a pattern and press "C" on the board:</p>
+        <div class="patterns">
+
+            <div class="card">
+                <video class="img-fluid" autoplay loop muted src="assests/gun.mov"></video>
+                <button class="pattern" id="glider-gun">Glider Gun Pattern</button>
+            </div>
+
+            <div class="card">
+                <video class="img-fluid" autoplay loop muted src="assests/flotilla.mov"></video>
+                <button class="pattern" id="flotilla">Flotilla Pattern</button>
+            </div>
+      
+            <div class="card">
+                <video class="img-fluid" autoplay loop muted src="assests/snacker.mov"></video>
+                <button class="pattern" id="snacker">Snacker Pattern</button>
+            </div>
+
+                  
+            <div class="card">
+                <video class="img-fluid" autoplay loop muted src="assests/galaxy.mov"></video>
+                <button class="pattern" id="galaxy">Galaxy Pattern</button>
+            </div>
+
+            <div class="card">
+                <video class="img-fluid" autoplay loop muted src="assests/beacon.mov"></video>
+                <button class="pattern" id="beacon-marker">Beacon Maker Pattern</button>
+            </div>
+            
+            <div class="card">
+                <video class="img-fluid" autoplay loop muted src="assests/gun.mov"></video>
+                <button class="pattern" id="fireship" >Fireship Pattern</button>
+            </div>
+           
+        </div>
+
+
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+        <script src="playground.js"></script>
+    </body>
+</html>

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500;700&family=Tektur&display=swap');
+
+body{
+    padding:20px;
+    background-color:#EADECB ;
+    color:#D33E58;
+    text-align: center;
+    font-family: 'Tektur', cursive;   
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes fadeInAnimation {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+ }
+}
+
+
+h1{
+    font-weight: 500;
+    font-size: 50px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.085);
+}
+
+button,.btn{
+    border-radius:30px;
+    padding:6px 25px;
+    border:none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin:0px 10px;
+}
+
+.games-button{
+    display:flex;
+    justify-content: center;
+    margin-top:10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.rules, .mouse-control-rules{
+    width:600px;
+    background:#fff;
+    border-radius:10px;
+    font-family: 'Tektur', cursive;
+    text-align: center;
+    color:#333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.1);
+    padding:20px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index:2;
+}
+
+
+.rules li{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.rules h2,.rules-heading{
+    color:#D33E58;
+    
+}
+
+.rules p{
+    font-weight: bold;
+    
+}
+
+.open-rules{
+    visibility: visible;
+    top:50%;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.additional{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+
+}
+
+.players{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+
+}
+
+.player{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.player-name{
+    border-bottom: 25px solid #e44545;
+    color:white;
+	/* border-left: 25px solid transparent; */
+	border-right: 30px solid transparent;
+	height: 0;
+	width: 130px;
+    transform:translateY(16px);
+}
+
+
+.player-score{
+    background: white;
+    padding:20px 100px;
+}
+
+.back-btn{
+    font-size: 12px;
+    padding:2px 10px;
+    
+    margin-left:20px;
+    position:absolute;
+    left:0%;
+    top:2%;
+
+}
+
+
+@media only screen and (max-width: 650px) {
+
+    h1{
+        font-size:30px;
+    }
+   
+    button{
+        font-size: 12px;
+        padding:2px 10px;
+    }
+
+    .players{
+        gap:20px;
+        
+    }
+
+    .player-score{
+        width:200px;
+        text-align: center;
+        padding:20px;
+    }
+
+    .additional{
+        align-items: center;
+        
+    }
+
+    .explain-btn{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .pick-color{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+ 
+
+}
+
+
+
+
+

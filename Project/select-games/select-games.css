@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500;700&family=Tektur&display=swap');
+
+body{
+    padding:70px;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes fadeInAnimation {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+ }
+}
+
+h1,h3,h4{
+    font-family: 'Tektur', cursive;
+    margin: 0;
+}
+
+h1{
+    font-size: 80px;
+    text-align: center;
+}
+
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.select-game{
+ 
+    margin-top: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@media only screen and (max-width: 1300px) {
+
+    body{
+        padding:70px;
+        overflow-y: visible;
+        overflow-x: visible; /* Hide horizontal scrollbar */
+    
+    }
+
+    .select-game{
+  
+        margin-top: 20px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+  }
+
+
+h4{
+    font-size:30px;
+    text-align: center;
+    text-shadow: 1px 1px 2px grey;
+    transform: translateY(20px);
+}
+
+.game{
+    margin:40px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    margin-top: 50px;
+    max-width: 700px;
+    min-width:450px;
+}
+
+
+video{
+    border-radius: 10px;
+    border: solid #E85A4F;  
+    transition: 1s;
+}
+
+video:hover{
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+.back-btn{
+    position:absolute;
+    left:0.5%;
+    top:2%;
+
+}
+
+button{
+
+    border-radius:30px;
+    padding:6px 25px;
+    border:none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin:0px 10px;
+
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+
+
+.description div h3{
+    color: #E85A4F;
+}
+
+.description button{
+    margin:0px 0px;
+}
+

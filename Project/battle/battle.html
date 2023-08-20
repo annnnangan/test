@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="battle.css"/> 
+    </head>
+    <body>
+        
+            <a href="../select-games/select-games.html"><button class="back-btn">Back</button></a>
+      
+        <h1>Game of Life - Battle</h1>
+        <p>Beat your opponent by getting as much live cells as you could</p>
+
+        <div class="games-button">
+            <div class="games-control">
+                <button id="start-game">Start Game</button>  
+                <button id="reset-game">Reset Game</button>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h2>Game Rules</h2>
+            <p>Beat your opponent by getting as much live cells as you could </p>
+            <ol>
+                <li>There is only 1 round in a games. To start a new around, please click "Reset Game".</li>
+                <li>To start, each player should click "Start Game" button and will be given 10 seconds to drag on the board.</li>
+                <li>After 10 seconds, you will be entered 10 seconds generating time, which you are not allowed to drew and the cell will generate at this time.</li>
+                <li>Score will be counted afterward.</li>
+                <li>Player with more live cells will have higher score and win the games.</li>
+            </ol>
+
+            <button class="close-rules">Okay</button>
+
+        </div>
+
+        <div class="mouse-control-rules">
+            <div class="rules-heading">
+                <h4>Mouse Control</h4>
+            </div>
+
+            <div class="rules-content">
+                <div class="rule">
+                    <div class="key-layout">
+                        <video class="img-fluid" autoplay loop muted src="assests/drag.mov"></video>
+                    </div>
+                    <div class="description">Mouse drag to place life cell</div>
+                </div>
+
+                <div class="rule">
+                    <div class="key-layout">
+                        <video class="img-fluid" autoplay loop muted src="assests/release.mov"></video>
+                    </div>
+                    <div class="description">Release mouse to start generating pattern</div>
+                </div>
+            </div>
+
+            <div class="close">
+                <button class="close-rules mouse-close">Okay</button>
+        </div>
+    </div>
+
+
+       <div class="time">Time: 10s</div>
+
+       <div class="players">
+            <div class="player player-one">
+                <p class="player-name player-one-name">Player 1</p>
+                <p class="player-score player-one-score">Score: 0</p>
+            </div>
+            <div class="player player-two">
+                <p class="player-name player-two-name">Player 2</p>
+                <p class="player-score player-two-score">Score: 0</p>
+            </div>
+       </div>
+
+       <div class="winner"></div>
+
+    <div class="additional">
+        <div class="pick-color">
+            <label for="color-picker">Change Cell Color: </label>
+            <input type="color" value="#e44545" id="color-picker" />
+       </div>
+
+       <div class="explain-btn">
+        <button id="rules-btn">Games Rules</button>
+        <button id="mouse-control-rules-btn">Mouse Control Rules</button>
+       </div>
+
+
+    </div>
+
+
+
+    
+        <div id="games">
+            <div id='canvas'></div>
+        </div>
+            
+
+
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+        <script src="battle.js"></script>
+    </body>
+</html>
